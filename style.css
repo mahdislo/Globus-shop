@@ -1,0 +1,133 @@
+body {
+    font-size: 16px;
+    font-family:'Roboto Condensed', sans-serif;
+}
+
+.left-menu ul li:last-child a {
+    color: #469A35 !important;
+}
+
+.contact-links li:first-child a {
+      color: #f98a00 !important; 
+}
+
+.right-menu ul {
+    flex-direction: row;
+}
+
+main {
+    background-image: url(./img/texture_chalk.jpg);
+    color: #fff;
+    margin-top: -11px;
+    padding-top: 50px;
+}
+
+.right-menu .nav-item {
+  padding-right: 10px;
+}
+
+.fa-user {
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+.wooden-banner {
+    background-image: url(./img/pexels-pixabay-edited.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px 32px;
+    color: #fff;
+}
+
+.wooden-banner a {
+    color: #fff;
+    background-color: #EF7E39;
+    padding: 10px 40px;
+    font-size: 13px;
+}
+
+.social-banner {
+    background: rgb(242,169,46);
+    background: radial-gradient(circle, rgba(242,169,46,1) 0%, rgba(242,113,46,1) 54%);
+    color: #fff;
+    padding: 48px 32px;
+}
+
+.social-icons [class*="fa fa-"] {  
+    background-color: #fff;
+    border-radius: 50%;
+    color: #EF7E39;
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    margin: auto 10px;
+    width: 70px;
+    text-align: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons p {
+    padding-top: 20px;
+}
+
+.footer {
+    background-image: url(./img/texture_chalk.jpg);
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+.footer-links h5 {
+    text-align: left;
+    font-weight: 700;
+}
+
+.privacy-links {
+    text-align: right;
+}
+
+.privacy-links a {
+    color: #fff;
+    margin-left: 20px;
+}
+
+@media (min-width: 992px) {  
+    .social-links {
+        justify-content: flex-end;
+    } 
+ 
+    .main-menu {
+        justify-content: space-between;
+        padding-bottom: 28px;
+     }  
+    
+    .left-menu {
+        align-self: flex-end
+    }  
+    
+    .nav-link {
+        padding-bottom: 0;
+    }
+    
+    .wooden-banner {
+        padding: 112px 32px;
+    }
+  
+    .social-banner {
+        padding: 64px 32px;
+    }
+    
+    .seven-cols .col-lg-1 {
+        width: 188.5714285714285714285714285714px;
+  }
+}
+
