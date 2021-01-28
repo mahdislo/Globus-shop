@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ab9de3ef60.js" crossorigin="anonymous"></script>
     <title>Globus Online shop</title>
@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-light p-0">
     <div class="container">
         <a class="navbar-brand p-0" href="#">
-            <img src="./img/globusLogo.png" width="120" height="100">
+            <img src="./img/globusLogo.png" width="113" height="95">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
          <div class="left-menu">
              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Maerkte</a>
+                    <a class="nav-link active" aria-current="page" href="#">Märkte</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Bewusst Leben</a>
@@ -56,13 +56,13 @@
               </ul>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 social-links">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#"><i class="fab fa-youtube fa-lg"></i></a>
+                      <a class="nav-link active youtube" aria-current="page" href="#"><i class="fab fa-youtube fa-lg"></i></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                      <a class="nav-link active facebook" aria-current="page" href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                      <a class="nav-link active instagram" aria-current="page" href="#"><i class="fab fa-instagram fa-lg"></i></a>
                   </li>
               </ul>
           </div>
@@ -72,19 +72,104 @@
 
 <main>
    <div class="container">
-        Articles details will be put here.
+        <div class="row shopping-menu">
+            <div class="col-md-2 col-4 d-flex align-items-end pb-1 justify-content-around">
+                <i class="fas fa-shopping-cart"></i>
+                <p class="mb-0">Alle Produkte</p>
+                <i class="fas fa-sort-down pb-1"></i>
+            </div>
+            <div class="col-md-2 col-4 d-flex align-items-end pb-1 justify-content-around">
+              
+                <i class="fas fa-shopping-bag"></i>
+                <p class="mb-0">Einkaufsliste</p>
+                <i class="fas fa-sort-down pb-1"></i>
+            
+            </div>
+            <div class="col-md-8 col-4 d-flex justify-content-end">
+               <img src="./img/paper-shopping-bag.png" alt="paper-bag" class="paper-bag">  
+                   <div class="pt-3">
+                    <p class="mb-1">24 Artikel</p>
+                    <div class="d-flex">
+                        <i class="fas fa-check"></i>
+                        <p class="mb-0">gemerkt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row article-detail mt-3 mx-2 py-4">
+        <div class="col-md-5 col-12">
+         carousel will be here
+        </div>
+        <div class="col-md-7 col-12">
+          <div class="headline d-flex">
+              <h1>Cherry Tomaten</h1>
+              <div class="tags">
+                  <button type="button" class="btn btn-sm angebot">Angebot</button>
+                  <button type="button" class="btn btn-sm neu">Neu</button>
+              </div>
+          </div>  
+          <div class="subline">
+              <h6>Globus</h6>
+          </div>
+          <div class="d-flex price-size-section pt-md-4">
+             <div class="price-section caveat-font">
+              <div class="d-flex price">
+                  <h1>2,10 €</h1>
+                  <h5><del>2,60 €</del></h5>
+              </div>
+              <p class="mb-md-3 mb-0">inkl. MwSt. zzgl. Versandkosten</p>
+              <p>500 g (1kg= 4,20 €)</p>
+          </div> 
+          <div class="size">
+           <p class="text-right">Soll es eine andere Groesse sein?</p>  
+           <div class="radio-container">
+               <input type="radio" name="size" id="500">
+                <label for="500">
+                <span>500g</span>
+                </label>
+                <input type="radio" name="size" id="300">
+                <label for="300">
+                <span>300g</span>
+                </label>
+                <input type="radio" name="size" id="250">
+                <label for="250">
+                <span>250g</span>
+                </label> 
+            </div>
+          </div>
+          </div>
+          <div>
+           <div class="arrows-parent">
+                <div class="quantity d-flex justify-content-center">
+                <button class="btn minus-btn" type="button">-</button>
+                <input type="text" id="quantity" value="1" class="bg-light">
+                <button class="btn plus-btn" type="button">+</button>
+                </div>
+                 <img src="https://img.icons8.com/small/16/000000/right3.png" class="arrow-up"/>
+                 <img src="https://img.icons8.com/small/16/000000/right3.png" class="arrow-down"/>
+                <p class="caveat-font mehr">ich brauche mehr</p>
+                <p class="caveat-font weniger">weniger</p>
+           </div>
+              
+           
+           
+            
+          </div>
+          
+        </div>
+        </div>
    </div>
 </main>
 <footer>
     <div class="wooden-banner text-center">
         <div class="container">
-            <h1 class="display-6 mb-4">Kennen Sie unsere Eigenmarken?</h1>
+            <h1 class="mb-4 mt-4">Kennen Sie unsere Eigenmarken?</h1>
             <a class="btn btn-lg" role="button" href="#">entdecken</a>
         </div>
     </div>
     <div class="social-banner text-center">
         <div class="container">
-            <h1 class="display-6 mb-4">Bleiben Sie immer informiert</h1>
+            <h4 class="mb-3">Bleiben Sie immer informiert</h4>
             <div class= "social-icons d-flex justify-content-center">
                 <div class="facebook">
                     <a href="#">
@@ -119,26 +204,26 @@
                 <div class="col-12">
                     <div class="upward-arrow"> 
                         <i class="fas fa-level-up-alt fa-2x"></i>
-                        <p>Nach oben</p>
+                        <p class="mb-2">Nach oben</p>
                     </div>
                 </div>
             </div>
             <div class="row footer-links seven-cols">
                 <div class="col-6 col-md-3 col-lg-1">
-                    <h5>Maerkte</h5>   
+                    <h6>Märkte</h6>   
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                    <h5>Bewusst Leben</h5>
+                    <h6>Bewusst Leben</h6>
                     <ul>
                         <li>Bewusst Geniessen</li>
                         <li>Bewusst Pflegen</li>
-                        <li>Bewusst Wohlfuehlen</li>
+                        <li>Bewusst Wohlfühlen</li>
                         <li>Bewusst Handeln</li>
                         <li>Rezepte</li>               
                     </ul>  
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                    <h5>Sortiment</h5>
+                    <h6>Sortiment</h6>
                     <ul>
                          <li>Unsere Marken</li>
                          <li>Exklusivmarken</li>
@@ -146,7 +231,7 @@
                    </ul>  
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                     <h5>Services</h5>
+                     <h6>Services</h6>
                      <ul>
                           <li>Newletter</li>
                           <li>Services vor Ort</li>
@@ -155,7 +240,7 @@
                      </ul> 
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                      <h5>Unternehmen</h5>
+                      <h6>Unternehmen</h6>
                       <ul>
                           <li>Profil</li>
                           <li>Historie</li>
@@ -168,15 +253,15 @@
                      </ul>
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                      <h5>Mein Globus</h5>
+                      <h6>Mein Globus</h6>
                       <ul>
                           <li>Weinliebhaber Club</li>
                           <li>Weltentdecker Club</li>
-                          <li>Tankeschoen</li>
+                          <li>Tankeschön</li>
                       </ul>
                 </div>
                 <div class="col-6 col-md-3 col-lg-1">
-                      <h5>Globus-Gruppe</h5>
+                      <h6>Globus-Gruppe</h6>
                       <ul>
                          <li>Globus Baummarkt</li>
                          <li>Alphatecc</li>
@@ -188,9 +273,9 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                        <div class="privacy-links">
-                           <a href="#">Impressum</a>
-                           <a href="#">Datenschutz</a>
+                        <div class="privacy-links d-flex justify-content-end pt-3">
+                           <p><a href="#">Impressum</a></p>
+                           <p><a href="#">Datenschutz</a></p>
                         </div>
                   </div>
                </div>
