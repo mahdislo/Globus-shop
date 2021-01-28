@@ -1,12 +1,27 @@
+/** gothic font family **/
 @font-face {
     font-family: 'Clearface Gothic W02 Regular';
-    src: url("font/196ae79832916c608cbde62d21c8b9dd.eot"); 
+    src: url("font/196ae79832916c608cbde62d21c8b9dd.eot");
     src: url("font/196ae79832916c608cbde62d21c8b9dd.eot?#iefix") format("embedded-opentype"),
-    url("font/196ae79832916c608cbde62d21c8b9dd.woff2") format("woff2"), 
-    url("font/196ae79832916c608cbde62d21c8b9dd.woff") format("woff"), 
-    url("font/196ae79832916c608cbde62d21c8b9dd.ttf") format("truetype"), 
-    url("font/196ae79832916c608cbde62d21c8b9dd.svg#Clearface Gothic W02 Regular") format("svg"); 
+        url("font/196ae79832916c608cbde62d21c8b9dd.woff2") format("woff2"),
+        url("font/196ae79832916c608cbde62d21c8b9dd.woff") format("woff"),
+        url("font/196ae79832916c608cbde62d21c8b9dd.ttf") format("truetype"),
+        url("font/196ae79832916c608cbde62d21c8b9dd.svg#Clearface Gothic W02 Regular") format("svg");
 }
+
+/** caveat and permanent marker font families **/
+
+.caveat-font {
+    font-family: 'Caveat', cursive;
+}
+
+.permanent-marker-font {
+    font-family: 'Permanent Marker', cursive;
+}
+
+/********** mobile styles ***********/
+
+/** primary **/
 
 body {
     font-family: 'Clearface Gothic W02 Regular', sans-serif;
@@ -19,21 +34,37 @@ p {
     font-size: 11px;
 }
 
-.caveat-font {
-    font-family: 'Caveat', cursive;
+a.btn {
+    color: #fff;
+    background-color: #EF7E39;
+    padding: 4px 24px;
+    font-size: 12px;
 }
+
+/** navbar **/
 
 .left-menu ul li:last-child a {
     color: #469A35 !important;
 }
 
 .contact-links li:first-child a {
-      color: #f98a00 !important; 
+    color: #f98a00 !important;
 }
 
 .right-menu ul {
     flex-direction: row;
 }
+
+.right-menu .nav-item {
+    padding-right: 2px;
+}
+
+.fa-user {
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+/** main content section **/
 
 main {
     background-image: url(./img/texture_chalk.jpg);
@@ -42,14 +73,24 @@ main {
     padding-top: 50px;
 }
 
-.right-menu .nav-item {
-  padding-right: 2px;
+/** article details top menu **/
+
+.paper-bag {
+    width: 63px;
+    height: 55px;
 }
 
-.fa-user {
-    padding-top: 4px;
-    padding-right: 4px;
+.check-mark {
+    width: 12px;
+    height: 14px;
+    filter: invert(47%) sepia(48%) saturate(629%) hue-rotate(64deg) brightness(97%) contrast(87%);
 }
+
+.gemerkt {
+    color: #469A35;
+}
+
+/** footer banner1 **/
 
 .wooden-banner {
     background-image: url(./img/pexels-pixabay-edited.jpeg);
@@ -59,21 +100,15 @@ main {
     color: #fff;
 }
 
-.wooden-banner a {
-    color: #fff;
-    background-color: #EF7E39;
-    padding: 4px 24px;
-    font-size: 12px;
-}
+/** footer banner2 **/
 
 .social-banner {
-    background: rgb(242,169,46);
-    background: radial-gradient(circle, rgba(242,169,46,1) 0%, rgba(242,113,46,1) 54%);
+    background: radial-gradient(circle, rgba(242, 169, 46, 1) 0%, rgba(242, 113, 46, 1) 54%);
     color: #fff;
     padding: 48px 32px;
 }
 
-.social-icons [class*="fa fa-"] {  
+.social-icons [class*="fa fa-"] {
     background-color: #fff;
     border-radius: 50%;
     color: #EF7E39;
@@ -90,10 +125,7 @@ main {
     color: #fff;
 }
 
-.paper-bag {
-        width: 63px;
-        height: 55px;   
-}
+/** article details section **/
 
 .article-detail .headline {
     justify-content: space-between;
@@ -114,9 +146,9 @@ main {
 .quantity button {
     width: 29px;
     height: 29px;
-    border: 1px solid #555;;
+    border: 1px solid #555;
     color: #fff;
-    background: #555;;
+    background: #555;
     padding: 0;
 }
 
@@ -127,39 +159,204 @@ main {
     text-align: center;
     width: 28px;
     font-size: 14px;
-    color: gray;
+    color: #555;
     font-weight: 300;
 }
 
 .arrows-parent {
     position: relative;
+    align-self: flex-end;
+    margin-right: 42px;
+    margin-bottom: 11px;
 }
 
 .arrow-up {
     position: absolute;
-    top: 46%;
-    left: 30%;
+    top: 53%;
+    left: -26%;
     transform: rotate(-51deg);
 }
 
 .arrow-down {
     position: absolute;
-    right: 30%;
-    bottom: 88%;
+    right: -26%;
+    bottom: 100%;
     transform: rotate(360deg) scaleX(-1);
 }
 
 .mehr {
     position: absolute;
     bottom: 100%;
-    left: 59%;
+    left: 61%;
+    width: max-content;
 }
 
 .weniger {
     position: absolute;
-    top: 39%;
-    left: 19%;
+    top: 15%;
+    left: -57%;
 }
+
+.article-detail [class*="fa fa-"] {
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: auto 10px;
+    width: 35px;
+    text-align: center;
+}
+
+.article-detail .vergleichen .fa-sync {
+    background-color: #EF7E39;
+}
+
+.article-detail .einkaufsliste .fa-shopping-bag {
+    background-color: #469A35;
+}
+
+.article-detail .container {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #555;
+}
+
+.article-detail .tags .btn {
+    color: #fff;
+}
+
+.article-detail .tags .neu {
+    background-color: #469A35;
+    padding: 0 9px;
+}
+
+.article-detail .tags .angebot {
+    background-color: #C42C28;
+    padding: 0 13px;
+
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+}
+
+.radio-container label {
+    height: 21px;
+    width: 40px;
+    border: 0.5px solid #555;
+    margin: auto;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.radio-container label > span {
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+}
+
+.radio-container input[type="radio"]:checked + label {
+    border-color: #C42C28;
+    color: #C42C28;
+}
+
+.quantity .minus-btn {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.quantity .plus-btn {
+    border-radius: 0px 5px 5px 0px;
+}
+
+/** Article details' Carousel **/
+
+.carousel-indicators li {
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #555;
+    margin-left: 18px
+}
+
+.carousel-indicators .active {
+    background-color: #EF7E39;
+    border: 1px solid #EF7E39;
+}
+
+/** environment symbols banner **/
+
+.environment-symbols img {
+    width: 35%;
+    filter: invert(72%) sepia(74%) saturate(3853%) hue-rotate(337deg) brightness(99%) contrast(90%);
+}
+
+/** Tab panel **/
+.nav-panel .row .col-6 {
+    max-width: 904px;
+}
+
+.nav-tabs li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: #fff;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    background-color: #f8f8f8;
+    color: #555;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.nav-tabs {
+    border: 0;
+}
+
+/** Tab panel content **/
+
+.table {
+    border-color: lightgray;
+    color: darkgray;
+    width: 80%;
+}
+
+.table tr td {
+    text-align: right;
+}
+
+.table tr td:first-child {
+    text-align: left;
+}
+
+.content-container {
+    text-align: center;
+    margin: auto;
+    max-width: 904px;
+}
+
+.tab-content {
+    background-color: #f8f8f8;
+    padding: 40px 18px;
+}
+
+.nav-panel h4, h3 {
+    color: #555;
+}
+
+.bewusst-leben {
+    text-align: left;
+}
+
+/** main Footer **/
 
 .footer {
     background-image: url(./img/texture_chalk.jpg);
@@ -187,186 +384,13 @@ main {
     margin-left: 20px;
 }
 
-.article-detail {
-    background-color: #fff;
-    border-radius: 5px;
-    color: #555;
-}
 
-.article-detail .tags .btn{
-    color: #fff;
-}
-
-.article-detail .tags .neu {
-    background-color: #469A35;
-    padding: 0 9px;
-}
-
-.article-detail .tags .angebot {
-    background-color: #C42C28;
-    padding: 0 13px;
+@media (min-width: 992px) {
     
-}
+   /** primary **/    
 
-input[type="radio"]{
-    -webkit-appearance: none;
-}
-
-.radio-container label {
-   height: 21px;
-   width: 40px;
-   border: 0.5px solid #555;
-   margin: auto;
-   border-radius: 5px;
-   position: relative;
-   transition: 0.5s;
-}
-
-.radio-container label>span {
-    font-size: 10px;
-    font-weight: 500;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -51%);
-}
-
-.radio-container input[type="radio"]:checked + label {
-	border-color: #C42C28;
-	color: #C42C28;
-}
-
-.quantity .minus-btn {
-   border-radius: 5px 0px  0px 5px;
-}
-
-.quantity .plus-btn {
-    border-radius: 0px 5px 5px 0px;
-}
-
-@media (min-width: 992px) { 
-    
     p {
         font-size: 15px;
-    }
-    .navbar-brand {
-        margin-left: 11px;
-    }
-    
-    .nav-link {
-        padding-top: 11px;
-    }
-    
-    .left-menu .navbar-nav .nav-item a {
-        padding-left: 8px;
-        padding-right: 18px;
-    }
-    
-    .right-menu .navbar-nav .nav-item a {
-        padding-right: 0;
-        font-size: 11px;
-        padding-bottom: 5px;
-    }
-    
-     .right-menu .social-links .nav-item a {
-        padding-bottom: 0;
-        padding-top: 14px;
-    }
-    
-    .right-menu .social-links .nav-item .facebook {
-        padding-right: 4px;
-    }
-    
-    .right-menu .social-links .nav-item .instagram {
-        padding-right: 7px;
-    }
-    
-    .right-menu .social-links .nav-item .youtube {
-        padding-right: 5px;
-    }
-    
-    .right-menu .contact-links .nav-item a {
-        letter-spacing: -0.8px;
-        padding-bottom: 0;
-    }
-    
-    .right-menu .contact-links li:first-child {
-        padding-right: 14px;
-    }
-    
-    .social-links {
-        justify-content: flex-end;
-    } 
-    
-    .fa-user {
-        font-size: 15px;
-        padding-top: 0;
-    }
- 
-    .main-menu {
-        justify-content: space-between;
-        padding-bottom: 28px;
-     }  
-    
-    .left-menu {
-        align-self: flex-end
-    }  
-    
-    .nav-link {
-        padding-bottom: 0;
-    }
-    
-    .radio-container label {
-        height: 32px;
-        width: 72px;   
-    }
-    
-    .radio-container label>span {
-        font-size: 15px;
-        transform: translate(-50%, -50%);
-    }
-    
-    .arrow-up {
-        top: 46%;
-        left: 37%;
-        transform: rotate(-51deg);
-    }
-
-    .arrow-down {
-        right: 37%;
-        bottom: 100%;
-        transform: rotate(360deg) scaleX(-1);
-    }
-
-    .mehr {
-        bottom: 100%;
-        left: 59%;
-    }    
-
-    .weniger {
-        top: 32%;
-        left: 28%;
-    }    
-   
-    .wooden-banner {
-        padding: 90px 32px;
-    }
-  
-    .social-banner {
-        padding: 71px 32px 43px;
-    }
-    
-    .social-banner p { 
-        padding-top: 6px;
-        padding-bottom: 0;
-    }
-    
-    .seven-cols .col-lg-1 {
-        width: 124.52px;
-    }
-    
-    .footer-links ul li{
-        font-size: 11px;
     }
     
     h6 {
@@ -374,25 +398,163 @@ input[type="radio"]{
         margin-bottom: 3px;
     }
     
+     main .shopping-menu p {
+        font-size: 15px;
+    }
+    
+    /** navbar **/
+    
+    .navbar-brand {
+        margin-left: 11px;
+    }
+
+    .nav-link {
+        padding-top: 11px;
+    }
+
+    .left-menu .navbar-nav .nav-item a {
+        padding-left: 8px;
+        padding-right: 18px;
+    }
+
+    .right-menu .navbar-nav .nav-item a {
+        padding-right: 0;
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+
+    .right-menu .social-links .nav-item a {
+        padding-bottom: 0;
+        padding-top: 14px;
+    }
+
+    .right-menu .social-links .nav-item .facebook {
+        padding-right: 4px;
+    }
+
+    .right-menu .social-links .nav-item .instagram {
+        padding-right: 7px;
+    }
+
+    .right-menu .social-links .nav-item .youtube {
+        padding-right: 5px;
+    }
+
+    .right-menu .contact-links .nav-item a {
+        letter-spacing: -0.8px;
+        padding-bottom: 0;
+    }
+
+    .right-menu .contact-links li:first-child {
+        padding-right: 14px;
+    }
+
+    .social-links {
+        justify-content: flex-end;
+    }
+
+    .fa-user {
+        font-size: 15px;
+        padding-top: 0;
+    }
+
+    .main-menu {
+        justify-content: space-between;
+        padding-bottom: 28px;
+    }
+
+    .left-menu {
+        align-self: flex-end
+    }
+
+    .nav-link {
+        padding-bottom: 0;
+    }
+    
+    /** article details top menu **/ 
+    
     .paper-bag {
         width: 73px;
         height: 73px;
     }
+
+    /** article details **/
     
-    main .shopping-menu p {
+    .radio-container label {
+        height: 32px;
+        width: 72px;
+    }
+
+    .radio-container label > span {
         font-size: 15px;
+        transform: translate(-50%, -50%);
+    }
+
+    .arrow-up {
+        top: 46%;
+        left: -22%;
+        transform: rotate(-51deg);
+    }
+
+    .arrow-down {
+        right: -26%;
+        bottom: 100%;
+        transform: rotate(360deg) scaleX(-1);
+    }
+
+    .mehr {
+        bottom: 100%;
+        left: 61%;
+    }
+
+    .weniger {
+        top: 35%;
+        left: -77%;
+    }
+    
+    /** frish and lecker banner section **/
+    
+    .environment-symbols .fa-angle-down {
+        font-size: 75px;
+    }
+    
+    /** first footer banner **/
+
+    .wooden-banner {
+        padding: 90px 32px;
+    }
+
+    /** seciond footer banner **/
+    
+    .social-banner {
+        padding: 71px 32px 43px;
+    }
+
+    .social-banner p {
+        padding-top: 6px;
+        padding-bottom: 0;
+    }
+    
+    /** main footer **/
+
+    .seven-cols .col-lg-1 {
+        width: 124.52px;
+    }
+
+    .footer-links ul li {
+        font-size: 11px;
     }
 }
 
 @media (min-width: 1200px) {
-    .container{
+    .container {
         max-width: 904px;
     }
-    
+
     h1 {
         font-size: 33.6px;
     }
-    
+
     h4 {
         font-size: 25.6px;
     }
