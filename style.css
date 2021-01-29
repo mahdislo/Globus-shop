@@ -249,6 +249,7 @@ input[type="radio"] {
     border-radius: 5px;
     position: relative;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .radio-container label > span {
@@ -354,6 +355,66 @@ input[type="radio"] {
 
 .bewusst-leben {
     text-align: left;
+}
+
+
+/** flyout menu **/
+
+.flyout-menu a {
+    text-decoration: none;
+    color: transparent;
+}
+
+.flyout-menu h2 {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.btn-area {
+    background-color: #555;
+    width: 123px;
+    height: 40px;
+    position: fixed;
+    left: -82px;
+    transition: .8s ease;
+    color: #fff;
+}
+
+.btn-area:hover{
+    position: fixed;
+    left: 0px;
+    width: 134px;
+    border: none;
+}
+
+#nav1 {
+    top: 200px;
+}
+
+#nav2 {
+    top: 244px;
+}
+
+#nav3 {
+    top: 288px;
+}
+
+#nav4 {
+    top: 332px;
+}
+
+#nav5 {
+    top: 376px;
+}
+ 
+.btn-area h2 i {
+    position: absolute;
+    right: 17px;
+    color: #fff;
+    font-size: 20px;
 }
 
 /** main Footer **/
