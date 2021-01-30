@@ -1,4 +1,4 @@
- function priceCalc() { 
+function priceCalc() { 
                     
                 var currentPrice = document.getElementById("current-price");
                 var previousPrice = document.getElementById("previous-price");

@@ -28,6 +28,9 @@ body {
     font-size: 16px;
     font-style: normal;
     color: #555;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 p {
@@ -71,23 +74,6 @@ main {
     color: #fff;
     margin-top: -15px;
     padding-top: 50px;
-}
-
-/** article details top menu **/
-
-.paper-bag {
-    width: 63px;
-    height: 55px;
-}
-
-.check-mark {
-    width: 12px;
-    height: 14px;
-    filter: invert(47%) sepia(48%) saturate(629%) hue-rotate(64deg) brightness(97%) contrast(87%);
-}
-
-.gemerkt {
-    color: #469A35;
 }
 
 /** footer banner1 **/
@@ -357,7 +343,6 @@ input[type="radio"] {
     text-align: left;
 }
 
-
 /** flyout menu **/
 
 .flyout-menu a {
@@ -445,10 +430,124 @@ input[type="radio"] {
     margin-left: 20px;
 }
 
+/** Mega Menu **/
+
+.header {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffff;
+}
+.header ul {
+  list-style: none;
+}
+
+.header ul.menu-items {
+  margin-bottom: 0;  
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-items li {
+  padding: 0.5rem 0rem;
+}
+
+.mega-links li {
+  padding: 0.5rem 1rem; 
+}
+
+.menu-items li:hover {
+  background-color: #ffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.menu-items li:hover .menu-item {
+  color:#f98a00;
+}
+
+.menu-items li:hover .fa-sort-down {
+    transform: rotate(180deg); 
+}
+
+.mega-menu {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+}
+
+.mega-menu .content {
+  background: #fff;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+.menu-items li:hover .mega-menu {
+  top: 54px;
+  opacity: 1;
+  visibility: visible;
+  border-bottom: 1px solid #f8f8f8;    
+}
+
+.mega-menu .img-col {
+    background-size: contain;
+    background: linear-gradient(0deg, rgba(244,154,4,0.8) 0%, rgba(244,154,4,0.8) 100%), url("img/Serving-Trays.jpg") no-repeat top center;
+    color: #fff;
+}
+
+.content .img-col p {
+  line-height: 1.2rem;
+}
+
+.mega-links a {
+    color: #555;
+}
+
+.mega-links {
+    padding-left: 0;
+}
+
+.mega-links .category i {
+    padding-right: 8px;
+}
+
+.menu-items a i {
+    padding: 0 4px;
+}
+
+.category-lists {
+    padding-top: 30px;
+}
+
+.paper-bag {
+    width: 63px;
+    height: 55px;
+}
+
+.check-mark {
+    width: 12px;
+    height: 14px;
+    filter: invert(47%) sepia(48%) saturate(629%) hue-rotate(64deg) brightness(97%) contrast(87%);
+}
+
+.gemerkt {
+    color: #469A35;
+}
 
 @media (min-width: 992px) {
     
-   /** primary **/    
+   /** primary *****************/    
 
     p {
         font-size: 15px;
@@ -457,10 +556,6 @@ input[type="radio"] {
     h6 {
         font-size: 1rem;
         margin-bottom: 3px;
-    }
-    
-     main .shopping-menu p {
-        font-size: 15px;
     }
     
     /** navbar **/
@@ -532,13 +627,6 @@ input[type="radio"] {
         padding-bottom: 0;
     }
     
-    /** article details top menu **/ 
-    
-    .paper-bag {
-        width: 73px;
-        height: 73px;
-    }
-
     /** article details **/
     
     .radio-container label {
@@ -604,6 +692,22 @@ input[type="radio"] {
 
     .footer-links ul li {
         font-size: 11px;
+    }
+    
+    /** Mega menu **/
+    
+    .menu-items li:hover .mega-menu {
+      top: 73px;  
+      border-bottom: none;    
+    }
+    
+    .menu-items li {
+      padding: 0.5rem 1rem;
+    }
+    
+    .paper-bag {
+        width: 73px;
+        height: 73px;
     }
 }
 
