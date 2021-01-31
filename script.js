@@ -1,3 +1,24 @@
+$('.carousel-main').owlCarousel({
+	loop: true,
+	autoplay: true,
+	autoplayTimeout: 1500,
+	margin: 20,
+	nav: true,
+	dots: false,
+	navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
+    responsive:{
+        0:{
+            items: 1
+        },
+        600:{
+            items: 3
+        },
+        1000:{
+            items: 5
+        }
+    }
+});
+
 function priceCalc() { 
                     
                 var currentPrice = document.getElementById("current-price");
