@@ -1,7 +1,27 @@
+/** increase number of product **/ 
+
+document.querySelector(".plus-btn").addEventListener("click", function(){
+    var currentValue = document.getElementById("quantity").value;
+    currentValue++;
+    document.getElementById("quantity").value = currentValue;
+});
+
+
+document.querySelector(".minus-btn").addEventListener("click", function(){
+    var currentValue = document.getElementById("quantity").value;
+    if (currentValue != 0) {
+       currentValue--;
+       document.getElementById("quantity").value = currentValue; 
+    }
+});
+
+
+/** products slider banner **/
+
 $('.carousel-main').owlCarousel({
 	loop: true,
 	autoplay: true,
-	autoplayTimeout: 1500,
+	autoplayTimeout: 2500,
 	margin: 20,
 	nav: true,
 	dots: false,
@@ -18,6 +38,8 @@ $('.carousel-main').owlCarousel({
         }
     }
 });
+
+/** price tag change based on the weight label **/
 
 function priceCalc() { 
                     
